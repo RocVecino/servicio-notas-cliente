@@ -1,0 +1,29 @@
+{
+  "name": "servicio-notas-cliente",
+  "version": "1.0.0",
+  "description": "Servicio notas cliente - trabajo fis",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RocVecino/servicio-notas-cliente.git"
+  },
+  "author": "Rocio Vecino y Manu Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RocVecino/servicio-notas-cliente/issues"
+  },
+  "homepage": "https://github.com/RocVecino/servicio-notas-cliente#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
