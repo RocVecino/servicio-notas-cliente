@@ -1,22 +1,16 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-require('dotenv').config();
+const express = require("express");
+var bodyParser = require("body-parser");
+var NotasResource = require("./NotasResource");
 
-//exportamos NotasResource
-var NotasResource = require("./notasResource");
+var port = ( process.env.PORT || 3002 );
 
-//declaramos el puerto
-const port = (process.env.PORT || 16778);
-const BASE_API_PATH = "/v1";
+var BASE_API_PATH = "/v1";
 
-//inicializamos express
-const app = express();
-
+var app = express();
 app.use(bodyParser.json());
 
 app.get(BASE_API_PATH+"/notas", (request, response) => {
-
-    console.log("GET all notas");
+    console.log("GET /notas");
 
     NotasResource.getAllNotas()
     .then((body) => {
@@ -29,5 +23,7 @@ app.get(BASE_API_PATH+"/notas", (request, response) => {
 });
 
 app.listen(port, () => {
-    console.log("Servidor del cliente is running");
-})
+
+    console.log("Server (client) ready and running!");
+
+});
