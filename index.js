@@ -1,12 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 //exportamos NotasResource
 var NotasResource = require("./notasResource");
 
 //declaramos el puerto
 const port = (process.env.PORT || 16778);
-const baseAPI = "/v1";
+const BASE_API_PATH = "/v1";
 
 //inicializamos express
 const app = express();
