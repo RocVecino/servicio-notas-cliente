@@ -5,6 +5,7 @@ var NotasResource = require("./NotasResource");
 var port = ( process.env.PORT || 3002 );
 
 var BASE_API_PATH = "/v1";
+//-> localhost:3002/v1/notas
 
 var app = express();
 app.use(bodyParser.json());
